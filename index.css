@@ -1,0 +1,192 @@
+.page-title{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/* ===== Navbar ===== */
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: none;
+    position: relative;
+}
+
+.navbar-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.navbar-menu a:hover {
+    color: #111827;
+}
+
+/*Navbar popup dorpdown*/
+
+.navbar {
+    overflow: visible;
+    padding-bottom: 1px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;           /*ระยะห่างของเมนู*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.nav-item {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -35px; /*ระยะห่าง Navbar จากข้างล่าง*/
+
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,0.15),
+        transparent
+    );
+}
+
+.nav-link.active {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 24px;
+    flex-shrink: 0;
+    margin-left: -90px;
+}
+
+.navbar-inner {
+    display: flex;
+    align-items: center;     /* 🔥 จัดกลางแนวตั้งจริง */
+    justify-content: space-between;
+    height: 100px;          /* เท่ากับ h-16 */
+    overflow: visible;
+    padding: 0 32px;
+}
+
+.nav-link:hover {
+    background-color: #75706c;
+    border-radius: 3px;   /* มนเล็กน้อย ดู corporate */
+    color: #111827;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /*ระยะห่างของ Navbar จากข้างบน*/
+    padding: 0 18px;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 3; /*ขนาดของ กรอบเวลาเลื่อนเมา่ส์ไปโดน*/
+
+    color: #374151;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.arrow { /*ลูกสอน Dropdown*/
+    margin-left: 6px; 
+    font-size: 0.65rem;
+    transition: transform 0.2s ease;
+}
+
+.has-dropdown:hover .arrow { /*ลูกสอน Dropdown*/
+    transform: rotate(180deg); 
+}
+
+.dropdown-panel { /*popup dropdown*/
+    position: absolute; /*กันไม่ให้ลอย*/
+    top: calc(100% + 14px); /* ดึงลงให้ไม่ชน navbar */
+    left: 0;
+
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px; /*เหลี่ยม/มน*/
+
+    padding: 14px;
+    min-width: 260px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1),0 4px 10px rgba(0,0,0,0.04);  /* layer ซ้อน ดู premium */
+    display: none;
+    z-index: 999;
+}
+
+.has-dropdown:hover .dropdown-panel {
+    display: block;
+}
+
+.dropdown-panel a { /*ลิงค์กับข้อมูล Dropdown*/
+    display: block;
+    padding: 10px 14px;
+    color: #374151;
+
+    font-size: 0.9rem;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-panel a:hover { /*ลิงค์กับข้อมูล Dropdown*/
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.nav-item.has-dropdown::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 14px;   /* สะพานเมาส์ */
+}
+
+.navbar-logo img {
+    height: 120px;        /* ปรับขนาดตราบริษัท */
+    width: auto;
+    display: block;
+    align-items: center;
+
+     position: relative;
+     top: 20px;   
+
+     transition: transform 0.2s ease;
+}
+
+.navbar-menu-wrapper {
+    max-width: 1280px;   /* = max-w-7xl */
+    margin: 0 auto;
+    padding: 0 24px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
