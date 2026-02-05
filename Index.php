@@ -122,7 +122,74 @@
 
   </div>
 </section>
+
+<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!-- 🔹 เนื้อหาซ้าย-รูปขวา -->
+    <div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-2">
+        Fiber Laser Machine
+      </h3>
+
+      <p class="text-gray-600 leading-relaxed mb-6">
+        High-speed fiber laser cutting with excellent precision,
+        suitable for industrial production lines.
+      </p>
+
+      <a href="machine-detail.php"
+         class="inline-block bg-red-600 text-white px-6 py-3
+                text-sm font-medium hover:bg-red-700 transition">
+        ดูรายละเอียด
+      </a>
+    </div>
+
+    <!-- 🔹 รูปเครื่องจักร (ขวา) -->
+    <div class="flex justify-center">
+      <img
+        src="รูปภาพ/4.png"
+        alt="Fiber Laser Machine"
+        class="w-full max-w-xl object-contain"
+      >
+    </div>
+
+  </div>
+
+</section>
+
+<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!--เนื้อหาขวา-รูปซ้าย)-->
+    <div class="order-2 lg:order-1">
+
+      <h2 class="text-2xl lg:text-3xl font-semibold mb-4"> 
+        Fiber Laser Machine
+      </h2>
+      
+      <p class="text-gray-600 mb-6 leading-relaxed">
+        high-speed fiber laser cutting with excellent precision.
+      </p>
+      <a href="machine-detail.php" class="inline-block px-6 py-3 bg-red-600 text-white">
+        ดูรายละเอียด
+      </a> 
+
+    </div>
     
+    <!--รูป (ขวาบน desktop)-->
+    <div>
+      <img
+        src="รูปภาพ/5.png"
+        alt="Fiber Laser Machine"
+        class="w-full h-auto object-contain"
+      >
+    </div>
+
+  </div>
+
+</section>    
+
     <!--ดึงข้อมูลจากไฟล์ hero.js-->
     <script src="hero.js" defer></script> 
 
