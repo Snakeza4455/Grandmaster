@@ -1,15 +1,7 @@
-.page-title{
-    font-size: 2.25rem;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 5rem;
-}
-
 /* ===== Navbar ===== */
 
 .navbar {
-    background-color: #ffffff;
-    border-bottom: none;
+    background-color: #ffffff; /*สี Navbar*/
     position: relative;
 }
 
@@ -47,22 +39,6 @@
     align-items: center;
 }
 
-.navbar::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -35px; /*ระยะห่าง Navbar จากข้างล่าง*/
-
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgba(0,0,0,0.15),
-        transparent
-    );
-}
-
 .nav-link.active {
     background-color: #000000;
     color: #ffffff;
@@ -71,39 +47,32 @@
 }
 
 .navbar-logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 24px;
-    flex-shrink: 0;
-    margin-left: -90px;
+  display: flex;
+  align-items: center;   /* สำคัญ */
 }
 
 .navbar-inner {
-    display: flex;
-    align-items: center;     /* 🔥 จัดกลางแนวตั้งจริง */
-    justify-content: space-between;
-    height: 100px;          /* เท่ากับ h-16 */
-    overflow: visible;
-    padding: 0 32px;
+  height: 90px; /*ปรับพื้นที่ของ Navbar*/
+  display: flex;
+  align-items: center; /* สำคัญที่สุด */
 }
 
 .nav-link:hover {
-    background-color: #75706c;
-    border-radius: 3px;   /* มนเล็กน้อย ดู corporate */
+    background-color: #a1a1a12a;
+    border-radius: 8px;   /* มนเล็กน้อย ดู corporate */
     color: #111827;
 }
-
+    
 .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%; /*ระยะห่างของ Navbar จากข้างบน*/
-    padding: 0 18px;
+    padding: 10px 18px;
 
     font-size: 0.95rem;
     font-weight: 500;
-    line-height: 3; /*ขนาดของ กรอบเวลาเลื่อนเมา่ส์ไปโดน*/
+    line-height: 1; /*ขนาดของ กรอบเวลาเลื่อนเมา่ส์ไปโดน*/
 
     color: #374151;
     text-decoration: none;
@@ -146,10 +115,10 @@
 .dropdown-panel a { /*ลิงค์กับข้อมูล Dropdown*/
     display: block;
     padding: 10px 14px;
-    color: #374151;
+    color: #514237;
 
     font-size: 0.9rem;
-    color: #374151;
+    color: #514137;
     text-decoration: none;
     border-radius: 8px;
 
@@ -171,15 +140,9 @@
 }
 
 .navbar-logo img {
-    height: 120px;        /* ปรับขนาดตราบริษัท */
+    height: 78px;   /*จุด sweet spot */
     width: auto;
-    display: block;
-    align-items: center;
-
-     position: relative;
-     top: 20px;   
-
-     transition: transform 0.2s ease;
+    display: block;  
 }
 
 .navbar-menu-wrapper {

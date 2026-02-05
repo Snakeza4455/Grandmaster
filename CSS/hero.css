@@ -1,0 +1,105 @@
+/* ===== HERO SLIDER ===== */
+
+.hero {
+  width: 100%;
+  margin: 0;
+  background: #ffffff; /*ปรับสีพื้นหลังสภาพไลด์*/
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 520xp;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 80% center; /*ขยับรูปไปทางขวา*/
+
+  transition: opacity 1s ease;
+  opacity: 0;
+
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-slide.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Overlay text */
+.hero-overlay {
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translate(-40px,-50%);
+  opacity: 0;
+
+  max-width: 560px;
+  color: #ff0000;
+  transform: transform 5s ease, opacity 5s ease;
+}
+
+.hero-slide.active .hero-overlay {
+  transform: translate(0, -50%);
+  opacity: 1;
+}
+
+.hero-overlay h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  transition-delay: 0.2s;
+}
+
+.hero-overlay p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  transition-delay: 0.6s;
+}
+
+/* Controls */
+.hero-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background:transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  color: #ff0000; /*สีตัวอักษรเลื่อน ซ้ายขวา*/
+  font-size: 60px;
+  font-weight: 500;
+
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.hero-btn.prev { left: 20px; }
+.hero-btn.next { right: 20px; }
+
+.hero-btn:hover {
+  background: rgba(0,0,0,0.7);
+  transform: translateY(-50%) scale(1.15);
+}
