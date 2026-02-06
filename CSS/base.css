@@ -3,3 +3,14 @@ body {
     color: #1f2937;
     background-color: #ffffff;
 }
+
+/* ระยะห่างมาตรฐานระหว่าง section */
+.section-space{
+    margin-bottom: 120px;
+}
+
+@media (max-width: 768){
+    .section-space{
+        margin-bottom: 80px;
+    }
+}

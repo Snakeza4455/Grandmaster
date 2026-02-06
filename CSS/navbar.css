@@ -1,7 +1,7 @@
 /* ===== Navbar ===== */
 
 .navbar {
-    background-color: #ffffff; /*สี Navbar*/
+    background-color: #e4e4e439; /*สี Navbar*/
     position: relative;
 }
 
@@ -58,9 +58,10 @@
 }
 
 .nav-link:hover {
-    background-color: #a1a1a12a;
+    background: #ff0000;
+    color: #ffffff;
+    transform: translateY(-1px);
     border-radius: 8px;   /* มนเล็กน้อย ดู corporate */
-    color: #111827;
 }
     
 .nav-link {
@@ -125,9 +126,9 @@
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.dropdown-panel a:hover { /*ลิงค์กับข้อมูล Dropdown*/
-    background-color: #f3f4f6;
-    color: #111827;
+.dropdown-panel a:hover { /*ลิงค์กับข้อมูล Dropdown เปลี่ยนสี*/
+    background-color: #ff0000;
+    color: #ffffff;
 }
 
 .nav-item.has-dropdown::after {

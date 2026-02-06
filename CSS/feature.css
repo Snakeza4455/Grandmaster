@@ -1,0 +1,129 @@
+/* ================= FEATURE SECTION ================= */
+
+.feature-section{ /*แก้ไขรูปภาพ*/
+    width: 100vw;
+    margin-left: calc(50% - 50vm);
+
+    background-image: url("../รูปภาพ/10.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* ทำ Overlay มืดนิดๆ */
+.feature-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0, 0.7); /*มืด*/
+    backdrop-filter: blur(4px); /*เบลอ*/
+    z-index: 0;
+}
+
+.feature-container{
+    position: relative; /* ดันขึ้นมาเหนือ overlay */
+    z-index: 1; /* อยู่เหนือ overlay */
+    max-width: 1200px;
+    margin: auto;
+    color: #ffffff; /*สีตัวหนังสือ*/
+}
+
+/* Header */
+.feature-header{
+    max-width: 700px;
+    margin-bottom: 60px;
+}
+
+.feature-header h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.feature-header p{
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* ===== Grid ===== */
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+/* ===== Card ข้อมูลที่ใส่ในการ์ด ===== */
+.feature-card{
+    background: #ffffff;
+    color: #111;
+    border-radius: 18px;
+    padding: 40px 28px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== hover เปลี่ยนสีการ์ด ===== */
+.feature-card:hover{
+    background: #ff0000;
+    color: #ffffff;
+    transform: translateY(-10px);
+}
+
+/*===== Icon =====*/
+.feature-icon{
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    background: #ffffff;
+    border-radius: 16px;
+
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: backgrond 0.3s ease;
+}
+
+.feature-icon img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+/* hover หมุน + เปลี่ยนสี */
+.feature-card:hover .feature-icon{
+    background: #ffffff;
+}
+
+.feature-card:hover .feature-icon img{     /*ทำให้หมุน*/
+    animation: spin-left 0.9s ease-in-out forwards;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px){
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px){
+    .feature-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes spin-left{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-720deg); /*หมุนซ้าย 2 รอบ*/
+    }
+}

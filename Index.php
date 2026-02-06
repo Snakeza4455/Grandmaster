@@ -20,10 +20,16 @@
     <!-- CSS เฉพาะ hero -->
     <link rel="stylesheet" href="CSS/hero.css">
 
+    <!-- CSS เฉพาะ Feature -->
+    <link rel="stylesheet" href="css/feature.css">
+
+    <!-- CSS เฉพาะ Service -->
+    <link rel="stylesheet" href="css/service.css">
+
 </head>
 <body> 
 
-<nav class="navbar bg-white">
+<nav class="navbar">
   <div class="max-w-7xl mx-auto px-4 lg:px-6">
 
     <div class="flex items-center justify-between h-[72px] lg:h-[90px]">
@@ -89,42 +95,41 @@
 </nav>
 
 <!-- HERO SLIDER -->
-<section class="hero relative w-full overflow-hidden">
-  <div class="hero-slider h-[300px] sm:h-[380px] lg:h[520px]">
-
-    <div class="hero-slide active" style="background-image:url('รูปภาพ/1.png')">
-      <div class="hero-overlay">
-        <h1>GRAND MASTER<br> MACHINE CO., LTD.</h1>
-        <p>
-          We import and supply CNC machines, gas, plasma and laser components,
-          as well as high-quality industrial cables built to international standards.
-        </p>
+<section class="hero relative w-full overflow-hidden mb-24">
+    <div class="hero-slider h-[300px] sm:h-[380px] lg:h[520px]">
+      
+      <div class="hero-slide active" style="background-image:url('รูปภาพ/8.jpg')">
+        <div class="hero-overlay">
+          <h1>GRAND MASTER<br> MACHINE CO., LTD.</h1>
+          <p>
+            We import and supply CNC machines, gas, plasma and laser components,
+            as well as high-quality industrial cables built to international standards.
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-slide" style="background-image:url('รูปภาพ/2.png')">
-      <div class="hero-overlay">
-        <h1>CNC & LASER<br>SOLUTIONS</h1>
-        <p>High performance machines with reliable after-sales service.</p>
+      <div class="hero-slide" style="background-image:url('รูปภาพ/9.jpg')">
+        <div class="hero-overlay">
+          <h1>CNC & LASER<br>SOLUTIONS</h1>
+          <p>High performance machines with reliable after-sales service.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-slide" style="background-image:url('รูปภาพ/3.png')">
-      <div class="hero-overlay">
-        <h1>INDUSTRIAL<br>CABLE</h1>
-        <p>International standard industrial cables for all applications.</p>
+      <div class="hero-slide" style="background-image:url('รูปภาพ/3.png')">
+        <div class="hero-overlay">
+          <h1>INDUSTRIAL<br>CABLE</h1>
+          <p>International standard industrial cables for all applications.</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Controls -->
-    <button class="hero-btn prev">‹</button>
-    <button class="hero-btn next">›</button>
+      <!-- Controls -->
+      <button class="hero-btn prev">‹</button>
+      <button class="hero-btn next">›</button>
 
-  </div>
+    </div>  
 </section>
 
 <section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
-
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
     <!-- 🔹 เนื้อหาซ้าย-รูปขวา -->
@@ -139,8 +144,8 @@
       </p>
 
       <a href="machine-detail.php"
-         class="inline-block bg-red-600 text-white px-6 py-3
-                text-sm font-medium hover:bg-red-700 transition">
+        class="inline-block bg-red-600 text-white px-6 py-3
+              text-sm font-medium hover:bg-red-700 transition">
         ดูรายละเอียด
       </a>
     </div>
@@ -155,10 +160,9 @@
     </div>
 
   </div>
-
 </section>
 
-<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20">
+<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
     <!--เนื้อหาขวา-รูปซ้าย)-->
@@ -188,8 +192,134 @@
 
   </div>
 
-</section>    
+</section>
 
+<!-- ============= Feature Section ============= -->
+
+<section class="feature-section">
+  <div class="feature-container">
+
+    <!--=========== ข้อความหัวข้อ ===========-->
+    <div class="feature-header">
+      <h2>Grandmaster Machine CO., LTD.</h2>
+      <p>
+        บริษัท แกรนด์มาสเตอร์ แมชชีน จำกัด<br>
+        ผู้นำเข้าและจำหน่ายเครื่องจักร CNC และอุปกรณ์อุตสาหกรรม
+      </p>
+    </div>
+
+    <!-- ===== การ์ด 4 ใบ ===== -->
+    <div class="feature-grid">
+
+      <!-- Card 1 -->
+      <div class="feature-card">
+         <div class="feature-icon">
+          <img src="Icon/plug-zap.svg" alt="Universal Charging">
+         </div>
+         <h3>Universal Charging</h3>
+         <p>รองรับระบบอุตสาหกรรมหลายหลายรูปแบบ</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card">
+         <div class="feature-icon">
+          <img src="Icon/shield-check.svg" alt="Smart Access">
+         </div>
+         <h3>Smart Access</h3>
+         <p>ใช้งานง่าย เชื่อถือได้ มาตรฐานสากล</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feature-card">
+         <div class="feature-icon">
+          <img src="icon/square-activity.svg" alt="Live Monitoring">
+         </div>
+         <h3>Live Monitoring</h3>
+         <p>ตรวจสอบการสถานะเครื่องจักรแบบเรียลไทม์</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="feature-card">
+         <div class="feature-icon">
+          <img src="icon/leaf.svg" alt="Green Energy">
+         </div>
+         <h3>Green Energy</h3>
+         <p>รองรับพลังงานอุตสาหกรรมอย่างยังยื่น</p>
+      </div>
+
+    </div>
+  </div>
+</section>   
+
+<!-- ========== หน้าการให้บริการ ==========-->
+
+<section class="service-section">
+  <div class="service-container">
+  
+    <!--- หัวข้อ --->
+    <div class="service-header">
+      <center><h2>บริการ และงานติดตั้ง</h2>
+      <p> Our Service</p>
+      </center>
+    </div>
+
+    <!--- รายการบริการ--->
+    <div class=" service-grid">
+
+      <!--- Service Card--->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="รูปภาพ/11.jpg" alt="ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์">
+        </div>
+
+        <h3>ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ ขนาด 12000W</h3>
+
+        <p class="service-desc">
+          ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ พร้อมปรับจูนและทดสอบหน้างาน
+        </p>
+
+        <a href="service-detail.php?id=1" class="service-btn">
+          Read More
+        </a>
+      </div>
+
+      <!--- Service Card--->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="รูปภาพ/12.jpg" alt="ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์">
+        </div>
+
+        <h3>ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ ขนาด 12000W</h3>
+
+        <p class="service-desc">
+          ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ พร้อมปรับจูนและทดสอบหน้างาน
+        </p>
+
+        <a href="service-detail.php?id=1" class="service-btn">
+          Read More
+        </a>
+      </div>
+
+      <!--- Service Card--->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="รูปภาพ/13.jpg" alt="ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์">
+        </div>
+
+        <h3>ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ ขนาด 12000W</h3>
+
+        <p class="service-desc">
+          ติดตั้งเครื่องตัดไฟเบอร์เลเซอร์ พร้อมปรับจูนและทดสอบหน้างาน
+        </p>
+
+        <a href="service-detail.php?id=1" class="service-btn">
+          Read More
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
     <!--ดึงข้อมูลจากไฟล์ hero.js-->
     <script src="hero.js" defer></script> 
 
