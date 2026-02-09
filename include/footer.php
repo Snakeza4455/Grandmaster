@@ -33,12 +33,12 @@
             <h4>Map</h4>
 
             <iframe
-                src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.918929049443!2d100.71217379999999!3d13.540564600000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5e952dcc076f%3A0x592c649fb11bc10d!2z4Lin4Li04LiZ4Lin4Li04LiZ!5e0!3m2!1sth!2sth!4v1770375528570!5m2!1sth!2sth"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.9189290494432!2d100.7121738!3d13.5405646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d5e952dcc076f%3A0x592c649fb11bc10d!2z4Lin4Li04LiZ4Lin4Li04LiZ!5e0!3m2!1sth!2sth!4v1770432200548!5m2!1sth!2sth">
                 while="100%"
                 height="160"
                 style="border:0;"
                 loading="lazy">
-                </iframe>    
+            </iframe>    
         </div>
         
     </div>

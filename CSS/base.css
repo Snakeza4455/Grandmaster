@@ -9,6 +9,15 @@ body {
     margin-bottom: 120px;
 }
 
+.machine-section{ /* Background */
+    background-color: #c5c5c52a;
+    padding: 80px 0;
+}
+
+.inline-block{ /* ปุ่มดูรายละเอียด */
+    background-color: #ff0000;
+}
+
 @media (max-width: 768){
     .section-space{
         margin-bottom: 80px;

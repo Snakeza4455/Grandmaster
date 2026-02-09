@@ -2,15 +2,16 @@
 
 .feature-section{ /*แก้ไขรูปภาพ*/
     width: 100vw;
-    margin-left: calc(50% - 50vm);
+    max-width: 100%;
 
     background-image: url("../รูปภาพ/10.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     
     padding: 50px 20px;
     position: relative;
+    overflow: hidden;
 }
 
 /* ทำ Overlay มืดนิดๆ */
@@ -20,12 +21,12 @@
     inset: 0;
     background: rgba(0, 0, 0, 0, 0.7); /*มืด*/
     backdrop-filter: blur(4px); /*เบลอ*/
-    z-index: 0;
+    z-index: 1;
 }
 
 .feature-container{
     position: relative; /* ดันขึ้นมาเหนือ overlay */
-    z-index: 1; /* อยู่เหนือ overlay */
+    z-index: 2; /* อยู่เหนือ overlay */
     max-width: 1200px;
     margin: auto;
     color: #ffffff; /*สีตัวหนังสือ*/

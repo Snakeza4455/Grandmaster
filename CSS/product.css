@@ -1,0 +1,108 @@
+.product-container{
+    max-width: 1280px; /* คุมความกว้าง */
+    margin: auto;   /* จัดกลาง */
+    padding: 0 24px; /* เว้นซ้ายขวา */
+}
+
+.product-body{
+    background: #ff0000;
+    padding: 20px;
+    color: #ffffff;
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-body p{
+    margin-bottom: 18px;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.product-image{
+    width: 100%;
+    height: 260px; /* ปรับได้ตามดีไซต์ */
+    overflow: hidden;
+}
+
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ไม่บิด ไม่ยืด */
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img{
+    transform: scale(1.08); /* ซูมเข้า */
+}
+
+.product-content{
+    padding: 24px;
+    background: #c5c5c52a; /* สีพืื้นหลังเริ่มต้น */
+    color: #000000;
+}
+
+.product-content h3{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.product-content p{
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.product-card:hover .product-content{
+    background: #ff0000; /* แดงเข้มขึ้น */
+    color: #fff;
+}
+
+.product-btn{
+    display: inline-block;
+    margin-top: 30px; /* ดันปุ่มลง ทำให้ขนาดการ์ดใหญ่ขึ้น */
+    padding: 8px 16px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 999px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.product-hero{
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: #ff0000;
+    color: #fff;
+}
+
+.product-section{
+    padding: 60px 0 100px;
+}
+
+@media (max-width: 1024px){
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px){
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+}

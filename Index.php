@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<?php
+require 'include/db.php';
+$sql = "SELECT * FROM hero_slides
+        WHERE is_active = 1
+        ORDER BY sort_order ASC";
+
+$result = $conn->query($sql);
+?>
+
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -26,110 +36,40 @@
     <!-- CSS เฉพาะ Service -->
     <link rel="stylesheet" href="css/service.css">
 
+    <!-- CSS เฉพาะ Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+
 </head>
-<body> 
+<body>
 
-<nav class="navbar">
-  <div class="max-w-7xl mx-auto px-4 lg:px-6">
-
-    <div class="flex items-center justify-between h-[72px] lg:h-[90px]">
-
-      <!-- Logo -->
-      <div class="flex items-center flex-shrink-0">
-        <a href="index.php">
-          <img
-            src="รูปภาพ/LOGO-GMM.png"
-            alt="Grandmaster Machine Co., Ltd"
-            class="h-[52px] lg:h-[72px] w-auto"
-          >
-        </a>
-      </div>
-
-      <!-- Menu -->
-      <ul class="hidden lg:flex items-center gap-8">
-
-        <li><a href="#" class="nav-link">หน้าแรก</a></li>
-        <li><a href="#" class="nav-link">เกี่ยวกับเรา</a></li>
-
-        <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link">
-            เครื่องจักร <span class="arrow">▼</span>
-          </a>
-          <div class="dropdown-panel">
-            <a href="#">เครื่องตัด CNC</a>
-            <a href="#">เครื่องตัด Fiber Laser</a>
-          </div>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link">
-            อะไหล่เครื่องจักร <span class="arrow">▼</span>
-          </a>
-          <div class="dropdown-panel">
-            <a href="#">อะไหล่เครื่อง CNC</a>
-            <a href="#">อะไหล่เครื่อง Fiber Laser</a>
-          </div>
-        </li>
-
-        <li class="nav-item has-dropdown">
-          <a href="#" class="nav-link">
-            สายไฟอุตสาหกรรม <span class="arrow">▼</span>
-          </a>
-          <div class="dropdown-panel">
-            <a href="#">สายไฟคอนโทรล</a>
-            <a href="#">สายไฟชิลด์</a>
-            <a href="#">สายไฟฉนวนยาง</a>
-          </div>
-        </li>
-
-        <li><a href="#" class="nav-link">บริการของเรา</a></li>
-        <li><a href="#" class="nav-link">ติดต่อเรา</a></li>
-
-      </ul>
-
-      <!-- Mobile button -->
-      <button class="lg:hidden text-2xl">☰</button>
-
-    </div>
-  </div>
-</nav>
+<?php include 'include/navbar.php';?>
 
 <!-- HERO SLIDER -->
 <section class="hero relative w-full overflow-hidden mb-24">
-    <div class="hero-slider h-[300px] sm:h-[380px] lg:h[520px]">
-      
-      <div class="hero-slide active" style="background-image:url('รูปภาพ/8.jpg')">
+  <div class="hero-slider h-[300px] sm:h-[380px] lg:h-[520px]">
+
+    <?php $i = 0; ?>
+    <?php while($row = $result->fetch_assoc()): ?>
+      <div class="hero-slide <?php echo $i === 0 ? 'active' : ''; ?>"
+           style="background-image:url('รูปภาพ/<?php echo $row['image']; ?>')">
+
         <div class="hero-overlay">
-          <h1>GRAND MASTER<br> MACHINE CO., LTD.</h1>
-          <p>
-            We import and supply CNC machines, gas, plasma and laser components,
-            as well as high-quality industrial cables built to international standards.
-          </p>
+          <h1><?php echo nl2br($row['title']); ?></h1>
+          <p><?php echo $row['description']; ?></p>
         </div>
+
       </div>
+      <?php $i++; ?>
+    <?php endwhile; ?>
 
-      <div class="hero-slide" style="background-image:url('รูปภาพ/9.jpg')">
-        <div class="hero-overlay">
-          <h1>CNC & LASER<br>SOLUTIONS</h1>
-          <p>High performance machines with reliable after-sales service.</p>
-        </div>
-      </div>
+    <button class="hero-btn prev">‹</button>
+    <button class="hero-btn next">›</button>
 
-      <div class="hero-slide" style="background-image:url('รูปภาพ/3.png')">
-        <div class="hero-overlay">
-          <h1>INDUSTRIAL<br>CABLE</h1>
-          <p>International standard industrial cables for all applications.</p>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <button class="hero-btn prev">‹</button>
-      <button class="hero-btn next">›</button>
-
-    </div>  
+  </div>
 </section>
 
-<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
+
+<section class="machine-section max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
     <!-- 🔹 เนื้อหาซ้าย-รูปขวา -->
@@ -144,7 +84,7 @@
       </p>
 
       <a href="machine-detail.php"
-        class="inline-block bg-red-600 text-white px-6 py-3
+        class="inline-block text-white px-6 py-3
               text-sm font-medium hover:bg-red-700 transition">
         ดูรายละเอียด
       </a>
@@ -162,7 +102,7 @@
   </div>
 </section>
 
-<section class="machine-section bg-gray-50 max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
+<section class="machine-section max-w-7xl mx-auto px-4 lg:px-6 py-20 mb-24">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
     <!--เนื้อหาขวา-รูปซ้าย)-->
@@ -175,7 +115,7 @@
       <p class="text-gray-600 mb-6 leading-relaxed">
         high-speed fiber laser cutting with excellent precision.
       </p>
-      <a href="machine-detail.php" class="inline-block px-6 py-3 bg-red-600 text-white">
+      <a href="machine-detail.php" class="inline-block px-6 py-3 text-white">
         ดูรายละเอียด
       </a> 
 
@@ -197,6 +137,7 @@
 <!-- ============= Feature Section ============= -->
 
 <section class="feature-section">
+
   <div class="feature-container">
 
     <!--=========== ข้อความหัวข้อ ===========-->
@@ -320,8 +261,10 @@
     </div>
   </div>
 </section>
+
     <!--ดึงข้อมูลจากไฟล์ hero.js-->
-    <script src="hero.js" defer></script> 
+    <script src="hero.js" defer></script>
+    <?php include 'include/footer.php';?>
 
 </body>
 </html>
